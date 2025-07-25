@@ -1,0 +1,52 @@
+{
+    "Q1": {
+        "question": "who is the prime minister of india ?",
+        "options": [
+            "Narendra modi",
+            "Rahul gandhi",
+            "Amit shah",
+            "Arvind kejrival"
+        ],
+        "answer": "Narendra modi"
+    },
+    "Q2": {
+        "question": "what is the capital of india ?",
+        "options": [
+            "Mumbai",
+            "Delhi",
+            "Chennai",
+            "Kolkata"
+        ],
+        "answer": "Delhi"
+    },
+    "Q3": {
+        "question": "Who is the captain of indian team in 2011 world cup ?",
+        "options": [
+            "MS dhoni",
+            "Virat kohli",
+            "Kapil dev",
+            "Rohit sharma"
+        ],
+        "answer": "MS dhoni"
+    },
+    "Q5": {
+        "question": "which team has most IPL titels ?",
+        "options": [
+            "Chennai super kings",
+            "Royal chellengers bangluru",
+            "Kolkata knight riders",
+            "Gujarat titens"
+        ],
+        "answer": "Chennai super kings"
+    },
+    "Q4": {
+        "question": "who is the founder of relaince industries ?",
+        "options": [
+            "Mukesh ambani",
+            "Dhirubhai ambani",
+            "Akash ambani",
+            "Nita ambani"
+        ],
+        "answer": "Dhirubhai ambani"
+    }
+}
