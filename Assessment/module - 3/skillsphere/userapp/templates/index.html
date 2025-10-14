@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Home | SkillSphere{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="text-center py-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg">
+  <h1 class="text-4xl font-bold mb-4">Learn Anything, Anytime, Anywhere</h1>
+  <p class="text-lg mb-6">Join thousands of learners and explore top-rated courses</p>
+  <a href="{% url 'courses' %}" class="bg-white text-blue-600 px-6 py-2 rounded font-semibold">Browse Courses</a>
+</section>
+
+<!-- Categories Section -->
+<section class="mt-12">
+  <h2 class="text-2xl font-bold mb-4">Popular Categories</h2>
+  <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
+    {% for category in categories %}
+    <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg cursor-pointer text-center">
+      <p class="text-xl font-semibold text-blue-600">{{ category.name }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Featured Courses -->
+<section class="mt-12">
+  <h2 class="text-2xl font-bold mb-4">Featured Courses</h2>
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+    {% for course in courses %}
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg">
+      <img src="{{ course.thumbnail.url }}" alt="course" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">{{ course.title }}</h3>
+        <p class="text-sm text-gray-500 mb-3">{{ course.category.name }}</p>
+        <p class="text-blue-600 font-bold mb-3">₹{{ course.fee }}</p>
+        <a href="{% url 'course_detail' course.slug %}" class="text-white bg-blue-600 px-3 py-1 rounded">View Details</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
